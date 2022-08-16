@@ -39,6 +39,13 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        generator: {
+          filename: `assets/images/[name].${VERSION_APP}.${TIME}.[hash][ext][query]`,
+        },
+        test: /\.(png|jpg|gif|svg)(\?[\s\S]+)?$/,
+        type: "asset/resource",
+      },
     ],
   },
 
