@@ -46,6 +46,13 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)(\?[\s\S]+)?$/,
         type: "asset/resource",
       },
+      {
+        generator: {
+          filename: `assets/fonts/[name].${VERSION_APP}.${TIME}.[hash][ext][query]`,
+        },
+        test: /\.(ttf|eot|otf)(\?[\s\S]+)?$/,
+        type: "asset/resource",
+      },
     ],
   },
 
