@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { Router } from "./routers/router.jsx";
+import { Router } from "Routers/router.jsx";
 
 const AppWithCallbackAfterRender = () => {
   useEffect(() => {

@@ -67,5 +67,29 @@ module.exports = {
     }),
   ],
 
-  resolve: { extensions: [".js", ".jsx", ".json"] },
+  resolve: {
+    extensions: [".js", ".jsx", ".json"],
+    alias: {
+      /* assets */
+      Fonts: path.resolve(__dirname, "./src/assets/fonts"),
+      Images: path.resolve(__dirname, "./src/assets/images"),
+      Styles: path.resolve(__dirname, "./src/assets/styles"),
+      /* Componets */
+      Components: path.resolve(__dirname, "./src/components"),
+      /* Containers */
+      Containers: path.resolve(__dirname, "./src/containers"),
+      /* Routers */
+      Routers: path.resolve(__dirname, "./src/routers"),
+      /* Store */
+      Store: path.resolve(__dirname, "./src/store"),
+      Actions: path.resolve(__dirname, "./src/store/actions"),
+      Selectors: path.resolve(__dirname, "./src/store/selectors"),
+      Reducers: path.resolve(__dirname, "./src/store/reducers"),
+      Config: path.resolve(__dirname, "./src/store/config"),
+      /* View */
+      View: path.resolve(__dirname, "./src/view"),
+      /* constants */
+      Constants: path.resolve(__dirname, "./src/constants"),
+    },
+  },
 };

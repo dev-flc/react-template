@@ -1,16 +1,16 @@
 import React from "react";
-
-import imageEslint from "./../../assets/images/eslint.svg";
-import imagePrettier from "./../../assets/images/prettier.svg";
-import imageReact from "./../../assets/images/react.svg";
-import imageRedux from "./../../assets/images/redux.svg";
-import imageSass from "./../../assets/images/sass.svg";
-import imageWebpack from "./../../assets/images/webpack.svg";
+import imageEslint from "Images/eslint.svg";
+import imagePrettier from "Images/prettier.svg";
+import imageReact from "Images/react.svg";
+import imageRedux from "Images/redux.svg";
+import imageSass from "Images/sass.svg";
+import imageWebpack from "Images/webpack.svg";
+import { title } from "Constants/home.js";
 
 const Home = React.memo(() => (
   <div className="container">
     <div className="sub-section">
-      <h1 className="title"> Welcome </h1>
+      <h1 className="title"> {title} </h1>
     </div>
     <div className="sub-section">
       <img src={imageReact} className="image image-animation" alt="React" />
