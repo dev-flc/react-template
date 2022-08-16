@@ -55,3 +55,23 @@
     transform: rotate(360deg);
   }
 }
+
+.button-text {
+  margin-top: 10px;
+  color: #686c75;
+  font-family: $manrope;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+  width: 120px;
+  border-radius: 7%;
+  border: 1px solid;
+}
+
+.button-text:hover {
+  color: #edeff3;
+  border-radius: 0%;
+  border: 1px solid #8a8a8f;
+}

@@ -78,6 +78,8 @@ module.exports = {
       Components: path.resolve(__dirname, "./src/components"),
       /* Containers */
       Containers: path.resolve(__dirname, "./src/containers"),
+      /* Hook */
+      Hook: path.resolve(__dirname, "./src/hook"),
       /* Routers */
       Routers: path.resolve(__dirname, "./src/routers"),
       /* Store */
@@ -86,6 +88,8 @@ module.exports = {
       Selectors: path.resolve(__dirname, "./src/store/selectors"),
       Reducers: path.resolve(__dirname, "./src/store/reducers"),
       Config: path.resolve(__dirname, "./src/store/config"),
+      /* Utils */
+      Utils: path.resolve(__dirname, "./src/utils"),
       /* View */
       View: path.resolve(__dirname, "./src/view"),
       /* constants */
