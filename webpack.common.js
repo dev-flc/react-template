@@ -8,9 +8,13 @@ module.exports = {
   entry: {
     [NAME_APP]: {
       filename: `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
-      import: [path.resolve(__dirname, "./src/index.js")],
+      import: [
+        path.resolve(__dirname, "./src/index.js"),
+        path.resolve(__dirname, "./src/assets/styles/index.scss"),
+      ],
     },
   },
+
   output: {
     chunkFilename: `js/[id].${VERSION_APP}.${TIME}.[contenthash].js`,
     chunkLoadTimeout: 30000,
@@ -21,6 +25,7 @@ module.exports = {
     publicPath: "/",
     uniqueName: NAME_APP,
   },
+
   module: {
     rules: [
       {
@@ -29,6 +34,10 @@ module.exports = {
         use: {
           loader: "babel-loader",
         },
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
