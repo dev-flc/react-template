@@ -1,0 +1,27 @@
+{
+  "name": "react_template",
+  "version": "1.0.0",
+  "description": "\"template react\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferch01992/React_template.git"
+  },
+  "keywords": [
+    "\"react",
+    "redux",
+    "webpack5",
+    "sass",
+    "babel7",
+    "mateialUI\""
+  ],
+  "author": "Fernando L.C",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferch01992/React_template/issues"
+  },
+  "homepage": "https://github.com/ferch01992/React_template#readme"
+}
