@@ -13,6 +13,7 @@
     "prettier:check": "prettier --check \"**/*.{js,jsx,json}\"",
     "prettier:fix": "prettier --write .",
     "prepare": "husky install",
+    "pre-commit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
