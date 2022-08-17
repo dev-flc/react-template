@@ -1,6 +1,6 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-import { reducerTitle } from "Reducers/reducerTitle.js";
+import { reducerTitle } from 'Reducers/reducerTitle.js';
 
 const allReducers = combineReducers({
   title: reducerTitle,

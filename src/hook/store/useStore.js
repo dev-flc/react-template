@@ -1,5 +1,5 @@
-import { useContext, useState, useEffect } from "react";
-import { ReactReduxContext } from "react-redux";
+import { useContext, useState, useEffect } from 'react';
+import { ReactReduxContext } from 'react-redux';
 
 const useStore = () => {
   const { store } = useContext(ReactReduxContext);

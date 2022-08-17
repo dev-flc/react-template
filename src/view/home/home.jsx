@@ -1,13 +1,13 @@
-import React from "react";
-import { actionSetTitle } from "Actions/actionSetTitle.js";
-import { useStore } from "Hook/store/useStore.js";
-import { convertTextUpperOrLower } from "Utils/utils.js";
-import imageEslint from "Images/eslint.svg";
-import imagePrettier from "Images/prettier.svg";
-import imageReact from "Images/react.svg";
-import imageRedux from "Images/redux.svg";
-import imageSass from "Images/sass.svg";
-import imageWebpack from "Images/webpack.svg";
+import React from 'react';
+import { actionSetTitle } from 'Actions/actionSetTitle.js';
+import { useStore } from 'Hook/store/useStore.js';
+import { convertTextUpperOrLower } from 'Utils/utils.js';
+import imageEslint from 'Images/eslint.svg';
+import imagePrettier from 'Images/prettier.svg';
+import imageReact from 'Images/react.svg';
+import imageRedux from 'Images/redux.svg';
+import imageSass from 'Images/sass.svg';
+import imageWebpack from 'Images/webpack.svg';
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore();
@@ -42,5 +42,7 @@ const Home = React.memo(() => {
     </div>
   );
 });
+
+Home.displayName = 'Home';
 
 export { Home };

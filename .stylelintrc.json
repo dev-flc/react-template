@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "overrides": [
+    {
+      "files": ["src/assets/styles/*.scss"],
+      "rules": {
+        "property-no-vendor-prefix": [
+          true,
+          {
+            "ignoreProperties": ["background-clip"]
+          }
+        ]
+      }
+    }
+  ]
+}

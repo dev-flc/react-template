@@ -1,9 +1,9 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { Provider } from "react-redux";
-import { store } from "Store/store.js";
-import { BrowserRouter } from "react-router-dom";
-import { Router } from "Routers/router.jsx";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from 'Store/store.js';
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'Routers/router.jsx';
 
 const AppWithCallbackAfterRender = () => (
   <Provider store={store}>
@@ -13,7 +13,7 @@ const AppWithCallbackAfterRender = () => (
   </Provider>
 );
 
-const container = document.getElementById("app");
+const container = document.getElementById('app');
 const app = createRoot(container);
 
 app.render(<AppWithCallbackAfterRender />);

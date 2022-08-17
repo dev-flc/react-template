@@ -1,0 +1,11 @@
+src/assets
+src/index.ejs
+/public/
+public
+/public
+/node_modules/
+node_modules
+/node_modules
+.eslintrc.js
+package-lock.json
+package.json

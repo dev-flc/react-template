@@ -1,12 +1,12 @@
-import reducers from "Config/reducers.js";
+import reducers from 'Config/reducers.js';
 
-import { state } from "Config/state.js";
+import { state } from 'Config/state.js';
 
-import { applyMiddleware, compose, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from 'redux';
 
-import thunk from "redux-thunk";
+import thunk from 'redux-thunk';
 
-const middleWareGeneral = (store) => (next) => (action) => next(action);
+const middleWareGeneral = store => next => action => next(action);
 
 const INITIAL_STORE = compose(applyMiddleware(thunk, middleWareGeneral))(
   createStore
