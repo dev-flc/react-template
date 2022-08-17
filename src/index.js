@@ -4,12 +4,23 @@ import { Provider } from 'react-redux';
 import { store } from 'Store/store.js';
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from 'Routers/router.jsx';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 const AppWithCallbackAfterRender = () => (
   <Provider store={store}>
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ThemeProvider>
   </Provider>
 );
 
