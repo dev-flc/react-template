@@ -3,6 +3,11 @@
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss"
   ],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": true,
+    "comment-empty-line-before": "always"
+  },
   "overrides": [
     {
       "files": ["src/assets/styles/*.scss"],
