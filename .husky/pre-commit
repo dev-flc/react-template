@@ -1,27 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-
-echo '😈 😈 😈 I N I C I A N D O   E L   P R O C E S O   D E   E S C A N E O   D E   T U   C Ó D I G O. 😈 😈 😈 '
-
-
-npm run prettier:check ||
-(
-  echo '🤢 🤮 🤢 🤮 UUPS - El CÓDIGO NO CUMPLE COM EL FORMATO REQUERIDO POR PRETTIER. TENDRAS QUE CORREGIRLO. 🔥 🔥 🔥 🔥'
-  false;
-)
-
-npm run lint:check ||
-(
-  echo '🤢 🤮 🤢 🤮 UUPS - El CÓDIGO NO CUMPLE COM LAS REGLAS ESLINT y ESTANDAR. TENDRAS QUE CORREGIRLO. 🔥 🔥 🔥 🔥'
-  false;
-)
-
-npm run style:check ||
-(
-  echo '🤢 🤮 🤢 🤮 UUPS - El CÓDIGO SCSS NO CUMPLE COM LAS REGLAS DE STYLELINT. TENDRAS QUE CORREGIRLO. 🔥 🔥 🔥 🔥'
-  false;
-)
-
-echo '✅ 😄 😄 ✅ T Ú   G A N A S T E   E S T A   V E Z...  P E R O   N O S   V E R E M O S   P R O N T O   H U M A N O. 😱 😱 😱 😱'
-
+npx lint-staged
