@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { actionSetTitle } from 'Actions/actionSetTitle.js';
+import { actionSetModeIsDark } from 'Actions/actionsTheme.js';
 import { useStore } from 'Hook/store/useStore.js';
 import { convertTextUpperOrLower } from 'Utils/utils.js';
 import imageEslint from 'Images/eslint.svg';
@@ -8,17 +9,31 @@ import imageReact from 'Images/react.svg';
 import imageRedux from 'Images/redux.svg';
 import imageSass from 'Images/sass.svg';
 import imageWebpack from 'Images/webpack.svg';
-import Button from '@mui/material/Button';
+
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import IconButton from '@mui/material/IconButton';
+import LightModeIcon from '@mui/icons-material/LightMode';
+
+import TextRotateUpIcon from '@mui/icons-material/TextRotateUp';
+import TextRotateVerticalIcon from '@mui/icons-material/TextRotateVertical';
+
 import Container from '@mui/material/Container';
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore();
-  const { title } = mapStateToProps;
+  const [isUpperCase, setisUpperCase] = useState(false);
 
-  const handleButton = () => {
-    const newText = convertTextUpperOrLower(title);
+  const { title, theme } = mapStateToProps;
+  const { modeIsDark } = theme;
 
-    mapDispatchToProps(actionSetTitle(newText));
+  const handleThemeMode = () => {
+    mapDispatchToProps(actionSetModeIsDark(!modeIsDark));
+  };
+
+  const handleConvertText = () => {
+    const { 0: text, 1: status } = convertTextUpperOrLower(title);
+    setisUpperCase(status);
+    mapDispatchToProps(actionSetTitle(text));
   };
 
   return (
@@ -43,9 +58,30 @@ const Home = React.memo(() => {
             alt="Webpack"
           />
         </div>
-        <Button variant="outlined" size="large" onClick={handleButton}>
-          Conver Text
-        </Button>
+        <div>
+          <IconButton
+            onClick={handleConvertText}
+            aria-label="delete"
+            size="large"
+          >
+            {isUpperCase ? (
+              <TextRotateUpIcon fontSize="inherit" />
+            ) : (
+              <TextRotateVerticalIcon fontSize="inherit" />
+            )}
+          </IconButton>
+          <IconButton
+            onClick={handleThemeMode}
+            aria-label="delete"
+            size="large"
+          >
+            {modeIsDark ? (
+              <DarkModeIcon fontSize="inherit" />
+            ) : (
+              <LightModeIcon fontSize="inherit" />
+            )}
+          </IconButton>
+        </div>
       </div>
     </Container>
   );
