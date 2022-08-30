@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const TIME = new Date().getTime();
 const { VERSION_APP, NAME_APP } = process.env;
@@ -9,8 +9,8 @@ module.exports = {
     [NAME_APP]: {
       filename: `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
       import: [
-        path.resolve(__dirname, './src/index.js'),
-        path.resolve(__dirname, './src/assets/styles/index.scss'),
+        path.resolve(__dirname, "./src/index.js"),
+        path.resolve(__dirname, "./src/assets/styles/index.scss"),
       ],
     },
   },
@@ -18,29 +18,22 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
-        test: /\.(js|jsx)$/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         generator: {
           filename: `assets/images/[name].${VERSION_APP}.${TIME}.[hash][ext][query]`,
         },
         test: /\.(png|jpg|gif|svg)(\?[\s\S]+)?$/,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         generator: {
           filename: `assets/fonts/[name].${VERSION_APP}.${TIME}.[hash][ext][query]`,
         },
         test: /\.(ttf|eot|otf)(\?[\s\S]+)?$/,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },
@@ -50,18 +43,18 @@ module.exports = {
     chunkLoadTimeout: 30000,
     clean: true,
     filename: `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, "public"),
     pathinfo: true,
-    publicPath: '/',
+    publicPath: "/",
     uniqueName: NAME_APP,
   },
 
   plugins: [
     new HtmlWebpackPlugin({
       cache: true,
-      favicon: path.resolve(__dirname, './src/assets/images/logo.svg'),
-      filename: 'index.html',
-      template: path.resolve(__dirname, './src/index.ejs'),
+      favicon: path.resolve(__dirname, "./src/assets/images/logo.svg"),
+      filename: "index.html",
+      template: path.resolve(__dirname, "./src/index.ejs"),
       title: NAME_APP,
       version: VERSION_APP,
     }),
@@ -70,35 +63,35 @@ module.exports = {
   resolve: {
     alias: {
       /* Store */
-      Actions: path.resolve(__dirname, './src/store/actions'),
+      Actions: path.resolve(__dirname, "./src/store/actions"),
       /* Componets */
-      Components: path.resolve(__dirname, './src/components'),
+      Components: path.resolve(__dirname, "./src/components"),
       /* Store */
-      Config: path.resolve(__dirname, './src/store/config'),
+      Config: path.resolve(__dirname, "./src/store/config"),
       /* constants */
-      Constants: path.resolve(__dirname, './src/constants'),
+      Constants: path.resolve(__dirname, "./src/constants"),
       /* Containers */
-      Containers: path.resolve(__dirname, './src/containers'),
+      Containers: path.resolve(__dirname, "./src/containers"),
       /* assets */
-      Fonts: path.resolve(__dirname, './src/assets/fonts'),
+      Fonts: path.resolve(__dirname, "./src/assets/fonts"),
       /* Hook */
-      Hook: path.resolve(__dirname, './src/hook'),
+      Hook: path.resolve(__dirname, "./src/hook"),
       /* assets */
-      Images: path.resolve(__dirname, './src/assets/images'),
+      Images: path.resolve(__dirname, "./src/assets/images"),
       /* Store */
-      Reducers: path.resolve(__dirname, './src/store/reducers'),
+      Reducers: path.resolve(__dirname, "./src/store/reducers"),
       /* Routers */
-      Routers: path.resolve(__dirname, './src/routers'),
+      Routers: path.resolve(__dirname, "./src/routers"),
       /* Store */
-      Selectors: path.resolve(__dirname, './src/store/selectors'),
-      Store: path.resolve(__dirname, './src/store'),
+      Selectors: path.resolve(__dirname, "./src/store/selectors"),
+      Store: path.resolve(__dirname, "./src/store"),
       /* assets */
-      Styles: path.resolve(__dirname, './src/assets/styles'),
+      Styles: path.resolve(__dirname, "./src/assets/styles"),
       /* Utils */
-      Utils: path.resolve(__dirname, './src/utils'),
+      Utils: path.resolve(__dirname, "./src/utils"),
       /* View */
-      View: path.resolve(__dirname, './src/view'),
+      View: path.resolve(__dirname, "./src/view"),
     },
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: [".js", ".jsx", ".json"],
   },
 };

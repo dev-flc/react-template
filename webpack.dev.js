@@ -1,26 +1,42 @@
-const path = require('path');
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+const path = require("path");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   devServer: {
-    allowedHosts: 'all',
-    client: { overlay: true, progress: true },
-    compress: true,
+    allowedHosts: "all",
     historyApiFallback: true,
-    host: '127.0.0.1',
-    hot: true,
+    host: "127.0.0.1",
     open: true,
     port: 8080,
-    static: { directory: path.resolve(__dirname, 'public') },
-    watchFiles: ['src/**/*'],
+    static: { directory: path.resolve(__dirname, "public") },
   },
 
-  devtool: 'source-map',
+  target: "web",
 
-  mode: 'development',
+  devtool: "source-map",
 
-  module: {},
+  mode: "development",
+
+  module: {
+    rules: [
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: require.resolve("babel-loader"),
+            options: {
+              plugins: [require.resolve("react-refresh/babel")].filter(Boolean),
+            },
+          },
+        ],
+      },
+    ],
+  },
+
+  plugins: [new ReactRefreshWebpackPlugin()],
 
   watchOptions: { ignored: /node_modules/ },
 });
