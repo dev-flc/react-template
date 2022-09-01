@@ -1,18 +1,18 @@
-import { ACTIONS_TITLE } from 'Constants/constantStore.js';
+import { ACTIONS_TITLE } from "Constants/constantStore.js"
 
 const reducerTitle = (state = {}, action = {}) => {
   if (!state) {
-    return null;
+    return null
   }
 
-  let newState = state;
-  const { type, payload } = action;
+  let newState = state
+  const { type, payload } = action
 
   if (type === ACTIONS_TITLE.SET_ACTION_TITLE) {
-    newState = payload;
+    newState = payload
   }
 
-  return newState;
-};
+  return newState
+}
 
-export { reducerTitle };
+export { reducerTitle }
