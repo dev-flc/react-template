@@ -26,5 +26,4 @@ const Router = () => {
     </Routes>
   )
 }
-
 export { Router }
