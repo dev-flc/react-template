@@ -69,12 +69,12 @@
     "redux-thunk": "2.4.1"
   },
   "husky": {
-    "hooks":{
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,css,md,jsx}": "prettier --write"
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

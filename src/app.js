@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter } from "react-router-dom"
-import { Router } from "Routers/router.jsx"
+import { Router } from "Routers/router.js"
 import { ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import { themeMui } from "Constants/themeMui.js"

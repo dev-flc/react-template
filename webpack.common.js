@@ -92,6 +92,6 @@ module.exports = {
       /* View */
       View: path.resolve(__dirname, "./src/view"),
     },
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".json"],
   },
 }
