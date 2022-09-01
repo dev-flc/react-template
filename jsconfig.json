@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "jsx": "react",
     "baseUrl": "./",
     "paths": {
-        /* Store */
+      /* Store */
       "Actions/*": ["src/store/actions/*"],
       /* Componets */
       "Components/*": ["src/components/*"],

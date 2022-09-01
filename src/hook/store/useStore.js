@@ -1,19 +1,19 @@
-import { useContext, useState, useEffect } from 'react';
-import { ReactReduxContext } from 'react-redux';
+import { useContext, useState, useEffect } from "react"
+import { ReactReduxContext } from "react-redux"
 
 const useStore = () => {
-  const { store } = useContext(ReactReduxContext);
-  const { getState, dispatch: mapDispatchToProps, subscribe } = store;
+  const { store } = useContext(ReactReduxContext)
+  const { getState, dispatch: mapDispatchToProps, subscribe } = store
 
-  const [mapStateToProps, setStoreState] = useState(getState());
+  const [mapStateToProps, setStoreState] = useState(getState())
 
   useEffect(() =>
     subscribe(() => {
-      setStoreState(getState());
+      setStoreState(getState())
     }, [])
-  );
+  )
 
-  return [mapStateToProps, mapDispatchToProps];
-};
+  return [mapStateToProps, mapDispatchToProps]
+}
 
-export { useStore };
+export { useStore }

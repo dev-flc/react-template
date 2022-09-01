@@ -1,8 +1,8 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-const TIME = new Date().getTime();
-const { VERSION_APP, NAME_APP } = process.env;
+const TIME = new Date().getTime()
+const { VERSION_APP, NAME_APP } = process.env
 
 module.exports = {
   entry: {
@@ -92,6 +92,6 @@ module.exports = {
       /* View */
       View: path.resolve(__dirname, "./src/view"),
     },
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".json"],
   },
-};
+}

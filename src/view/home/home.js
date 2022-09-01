@@ -1,40 +1,41 @@
-import React, { useState } from "react";
-import { actionSetTitle } from "Actions/actionSetTitle.js";
-import { actionSetModeIsDark } from "Actions/actionsTheme.js";
-import { useStore } from "Hook/store/useStore.js";
-import { convertTextUpperOrLower } from "Utils/utils.js";
-import imageEslint from "Images/eslint.svg";
-import imagePrettier from "Images/prettier.svg";
-import imageReact from "Images/react.svg";
-import imageRedux from "Images/redux.svg";
-import imageSass from "Images/sass.svg";
-import imageWebpack from "Images/webpack.svg";
+import React, { useState } from "react"
+import { actionSetTitle } from "Actions/actionSetTitle.js"
+import { actionSetModeIsDark } from "Actions/actionsTheme.js"
+import { useStore } from "Hook/store/useStore.js"
+import { convertTextUpperOrLower } from "Utils/utils.js"
+import imageEslint from "Images/eslint.svg"
+import imagePrettier from "Images/prettier.svg"
+import imageReact from "Images/react.svg"
+import imageRedux from "Images/redux.svg"
+import imageSass from "Images/sass.svg"
+import imageWebpack from "Images/webpack.svg"
 
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import IconButton from "@mui/material/IconButton";
-import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode"
+import IconButton from "@mui/material/IconButton"
+import LightModeIcon from "@mui/icons-material/LightMode"
 
-import TextRotateUpIcon from "@mui/icons-material/TextRotateUp";
-import TextRotateVerticalIcon from "@mui/icons-material/TextRotateVertical";
+import TextRotateUpIcon from "@mui/icons-material/TextRotateUp"
+import TextRotateVerticalIcon from "@mui/icons-material/TextRotateVertical"
 
-import Container from "@mui/material/Container";
+import Container from "@mui/material/Container"
 
 const Home = React.memo(() => {
-  const [mapStateToProps, mapDispatchToProps] = useStore();
-  const [isUpperCase, setisUpperCase] = useState(false);
+  const [mapStateToProps, mapDispatchToProps] = useStore()
+  const [isUpperCase, setisUpperCase] = useState(false)
 
-  const { title, theme } = mapStateToProps;
-  const { modeIsDark } = theme;
+  const { title, theme } = mapStateToProps
+
+  const { modeIsDark } = theme
 
   const handleThemeMode = () => {
-    mapDispatchToProps(actionSetModeIsDark(!modeIsDark));
-  };
+    mapDispatchToProps(actionSetModeIsDark(!modeIsDark))
+  }
 
   const handleConvertText = () => {
-    const { 0: text, 1: status } = convertTextUpperOrLower(title);
-    setisUpperCase(status);
-    mapDispatchToProps(actionSetTitle(text));
-  };
+    const { 0: text, 1: status } = convertTextUpperOrLower(title)
+    setisUpperCase(status)
+    mapDispatchToProps(actionSetTitle(text))
+  }
 
   return (
     <Container maxWidth="sm" fixed>
@@ -84,9 +85,9 @@ const Home = React.memo(() => {
         </div>
       </div>
     </Container>
-  );
-});
+  )
+})
 
-Home.displayName = "Home";
+Home.displayName = "Home"
 
-export { Home };
+export { Home }

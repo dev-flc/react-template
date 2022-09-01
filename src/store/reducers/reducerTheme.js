@@ -1,18 +1,18 @@
-import { ACTIONS_THEME } from 'Constants/constantStore.js';
+import { ACTIONS_THEME } from "Constants/constantStore.js"
 
 const reducerTheme = (state = {}, action = {}) => {
   if (!state) {
-    return null;
+    return null
   }
 
-  let newState = state;
-  const { type, payload } = action;
+  let newState = state
+  const { type, payload } = action
 
   if (type === ACTIONS_THEME.SET_ACTION_MODE_IS_DARK) {
-    newState = { ...state, modeIsDark: payload };
+    newState = { ...state, modeIsDark: payload }
   }
 
-  return newState;
-};
+  return newState
+}
 
-export { reducerTheme };
+export { reducerTheme }
