@@ -36,7 +36,7 @@ const Home = React.memo(() => {
     setisUpperCase(status)
     mapDispatchToProps(actionSetTitle(text))
   }
-  const Hola;
+
   return (
     <Container maxWidth="sm" fixed>
       <div className="container">

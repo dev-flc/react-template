@@ -1,7 +1,7 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
-import { ContainerGlobal } from "Containers/containerGlobal.jsx"
-import { Home } from "View/home/home.jsx"
+import { ContainerGlobal } from "Containers/containerGlobal.js"
+import { Home } from "View/home/home.js"
 
 const Router = () => {
   return (
