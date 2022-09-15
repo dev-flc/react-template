@@ -41,7 +41,7 @@ const Home = React.memo(() => {
     <Container maxWidth="sm" fixed>
       <div className="container">
         <div className="sub-section">
-          <h1 className="title"> F.L.C </h1>
+          <h1 className="title"> {title} </h1>
         </div>
         <div className="sub-section">
           <img src={imageReact} className="image image-animation" alt="React" />
