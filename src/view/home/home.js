@@ -3,6 +3,7 @@ import { actionSetTitle } from "Actions/actionSetTitle.js"
 import { actionSetModeIsDark } from "Actions/actionsTheme.js"
 import { useStore } from "Hook/store/useStore.js"
 import { convertTextUpperOrLower } from "Utils/utils.js"
+
 import imageEslint from "Images/eslint.svg"
 import imagePrettier from "Images/prettier.svg"
 import imageReact from "Images/react.svg"
@@ -10,10 +11,9 @@ import imageRedux from "Images/redux.svg"
 import imageSass from "Images/sass.svg"
 import imageWebpack from "Images/webpack.svg"
 
+import ButtonIcon from "Components/buttonIcon/buttonIcon.js"
 import DarkModeIcon from "@mui/icons-material/DarkMode"
-import IconButton from "@mui/material/IconButton"
 import LightModeIcon from "@mui/icons-material/LightMode"
-
 import TextRotateUpIcon from "@mui/icons-material/TextRotateUp"
 import TextRotateVerticalIcon from "@mui/icons-material/TextRotateVertical"
 
@@ -60,28 +60,19 @@ const Home = React.memo(() => {
           />
         </div>
         <div>
-          <IconButton
+          <ButtonIcon
+            statusButton={isUpperCase}
             onClick={handleConvertText}
-            aria-label="Text"
-            size="large"
-          >
-            {isUpperCase ? (
-              <TextRotateUpIcon fontSize="inherit" />
-            ) : (
-              <TextRotateVerticalIcon fontSize="inherit" />
-            )}
-          </IconButton>
-          <IconButton
+            iconOn={TextRotateUpIcon}
+            iconOff={TextRotateVerticalIcon}
+          />
+
+          <ButtonIcon
+            statusButton={modeIsDark}
             onClick={handleThemeMode}
-            aria-label="mode theme"
-            size="large"
-          >
-            {modeIsDark ? (
-              <LightModeIcon fontSize="inherit" />
-            ) : (
-              <DarkModeIcon fontSize="inherit" />
-            )}
-          </IconButton>
+            iconOn={LightModeIcon}
+            iconOff={DarkModeIcon}
+          />
         </div>
       </div>
     </Container>
