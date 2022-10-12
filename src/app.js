@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline'
 import { Router } from 'Routers/router.js'
-import { themeMui } from 'Constants/themeMui.js'
+import { themeMui } from 'Constants/theme/themeMui.js'
 import { ThemeProvider } from '@mui/material/styles'
 import { useStore } from 'Hook/store/useStore.js'
 
