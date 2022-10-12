@@ -1,26 +1,29 @@
-import React from "react"
-import { BrowserRouter } from "react-router-dom"
-import { Router } from "Routers/router.js"
-import { ThemeProvider } from "@mui/material/styles"
-import CssBaseline from "@mui/material/CssBaseline"
-import { themeMui } from "Constants/themeMui.js"
-import { useStore } from "Hook/store/useStore.js"
+import React from 'react'
+
+import { BrowserRouter } from 'react-router-dom'
+import CssBaseline from '@mui/material/CssBaseline'
+import { Router } from 'Routers/router.js'
+import { themeMui } from 'Constants/themeMui.js'
+import { ThemeProvider } from '@mui/material/styles'
+import { useStore } from 'Hook/store/useStore.js'
 
 const App = () => {
   const [mapStateToProps] = useStore()
   const { theme } = mapStateToProps
-  const { modeIsDark } = theme
+  const { paletteMode } = theme
 
   return (
-    <ThemeProvider theme={themeMui(modeIsDark)}>
-      <CssBaseline />
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+    <ThemeProvider theme={themeMui(paletteMode)}>
+      <React.Fragment>
+        <CssBaseline />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </React.Fragment>
     </ThemeProvider>
   )
 }
 
-App.displayName = "App"
+App.displayName = 'App'
 
 export { App }

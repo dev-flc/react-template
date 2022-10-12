@@ -1,4 +1,4 @@
-import { ACTIONS_THEME } from "Constants/constantStore.js"
+import { ACTIONS_THEME } from 'Constants/constantStore.js'
 
 const reducerTheme = (state = {}, action = {}) => {
   if (!state) {
@@ -9,7 +9,7 @@ const reducerTheme = (state = {}, action = {}) => {
   const { type, payload } = action
 
   if (type === ACTIONS_THEME.SET_ACTION_MODE_IS_DARK) {
-    newState = { ...state, modeIsDark: payload }
+    newState = { ...state, paletteMode: payload }
   }
 
   return newState

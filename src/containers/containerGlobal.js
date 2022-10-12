@@ -1,12 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
 
-const ContainerGlobal = React.memo((props) => <div> {props.children} </div>)
+import PropTypes from 'prop-types'
+
+const ContainerGlobal = React.memo(props => <div> {props.children} </div>)
 
 ContainerGlobal.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 }
 
-ContainerGlobal.displayName = "ContainerGlobal"
+ContainerGlobal.displayName = 'ContainerGlobal'
 
 export { ContainerGlobal }

@@ -1,6 +1,8 @@
+import { MODE_PALETTE } from 'Constants/themeMui.js'
+
 export const state = {
   theme: {
-    modeIsDark: true,
+    paletteMode: MODE_PALETTE.LIGHT
   },
-  title: "W E L C O M E",
+  title: 'W E L C O M E'
 }

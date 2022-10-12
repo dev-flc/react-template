@@ -1,34 +1,41 @@
-import React, { useState } from "react"
-import { actionSetTitle } from "Actions/actionSetTitle.js"
-import { actionSetModeIsDark } from "Actions/actionsTheme.js"
-import { useStore } from "Hook/store/useStore.js"
-import { convertTextUpperOrLower } from "Utils/utils.js"
-import imageEslint from "Images/eslint.svg"
-import imagePrettier from "Images/prettier.svg"
-import imageReact from "Images/react.svg"
-import imageRedux from "Images/redux.svg"
-import imageSass from "Images/sass.svg"
-import imageWebpack from "Images/webpack.svg"
+import React, { useState } from 'react'
 
-import DarkModeIcon from "@mui/icons-material/DarkMode"
-import IconButton from "@mui/material/IconButton"
-import LightModeIcon from "@mui/icons-material/LightMode"
+import { actionSetModeIsDark } from 'Actions/actionsTheme.js'
+import { actionSetTitle } from 'Actions/actionSetTitle.js'
+import { convertTextUpperOrLower } from 'Utils/utils.js'
+import { useStore } from 'Hook/store/useStore.js'
 
-import TextRotateUpIcon from "@mui/icons-material/TextRotateUp"
-import TextRotateVerticalIcon from "@mui/icons-material/TextRotateVertical"
+import imageEslint from 'Images/eslint.svg'
+import imagePrettier from 'Images/prettier.svg'
+import imageReact from 'Images/react.svg'
+import imageRedux from 'Images/redux.svg'
+import imageSass from 'Images/sass.svg'
+import imageWebpack from 'Images/webpack.svg'
 
-import Container from "@mui/material/Container"
+import { MODE_PALETTE } from 'Constants/themeMui.js'
+
+import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
+import Container from '@mui/material/Container'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import TextRotateUpIcon from '@mui/icons-material/TextRotateUp'
+import TextRotateVerticalIcon from '@mui/icons-material/TextRotateVertical'
+import Typography from '@mui/material/Typography'
+
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore()
   const [isUpperCase, setisUpperCase] = useState(false)
-
   const { title, theme } = mapStateToProps
-
-  const { modeIsDark } = theme
+  const { paletteMode } = theme
 
   const handleThemeMode = () => {
-    mapDispatchToProps(actionSetModeIsDark(!modeIsDark))
+    const mode =
+      paletteMode === MODE_PALETTE.DARK ? MODE_PALETTE.LIGHT : MODE_PALETTE.DARK
+
+    mapDispatchToProps(actionSetModeIsDark(mode))
   }
 
   const handleConvertText = () => {
@@ -41,8 +48,17 @@ const Home = React.memo(() => {
     <Container maxWidth="sm" fixed>
       <div className="container">
         <div className="sub-section">
-          <h1 className="title"> F.L.C </h1>
+          <Typography variant="h1" component="h1">
+            {title}
+          </Typography>
         </div>
+        <Stack direction="row" spacing={2}>
+          <Button variant="contained">Primary</Button>
+          <Button variant="contained">Link</Button>
+          <Button variant="contained" disabled>
+            Link
+          </Button>
+        </Stack>
         <div className="sub-section">
           <img src={imageReact} className="image image-animation" alt="React" />
           <img src={imageRedux} className="image image-animation" alt="Redux" />
@@ -60,34 +76,25 @@ const Home = React.memo(() => {
           />
         </div>
         <div>
-          <IconButton
+          <ButtonIcon
+            statusButton={isUpperCase}
             onClick={handleConvertText}
-            aria-label="Text"
-            size="large"
-          >
-            {isUpperCase ? (
-              <TextRotateUpIcon fontSize="inherit" />
-            ) : (
-              <TextRotateVerticalIcon fontSize="inherit" />
-            )}
-          </IconButton>
-          <IconButton
+            iconOn={TextRotateUpIcon}
+            iconOff={TextRotateVerticalIcon}
+          />
+
+          <ButtonIcon
+            statusButton={paletteMode === MODE_PALETTE.DARK}
             onClick={handleThemeMode}
-            aria-label="mode theme"
-            size="large"
-          >
-            {modeIsDark ? (
-              <LightModeIcon fontSize="inherit" />
-            ) : (
-              <DarkModeIcon fontSize="inherit" />
-            )}
-          </IconButton>
+            iconOn={LightModeIcon}
+            iconOff={DarkModeIcon}
+          />
         </div>
       </div>
     </Container>
   )
 })
 
-Home.displayName = "Home"
+Home.displayName = 'Home'
 
 export { Home }
