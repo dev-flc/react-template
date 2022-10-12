@@ -12,7 +12,7 @@ import imageRedux from 'Images/redux.svg'
 import imageSass from 'Images/sass.svg'
 import imageWebpack from 'Images/webpack.svg'
 
-import { MODE_PALETTE } from 'Constants/themeMui.js'
+import { MODE_PALETTE } from 'Constants/theme/themeMui.js'
 
 import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
 import Container from '@mui/material/Container'
@@ -21,9 +21,6 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import TextRotateUpIcon from '@mui/icons-material/TextRotateUp'
 import TextRotateVerticalIcon from '@mui/icons-material/TextRotateVertical'
 import Typography from '@mui/material/Typography'
-
-import Button from '@mui/material/Button'
-import Stack from '@mui/material/Stack'
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore()
@@ -52,13 +49,6 @@ const Home = React.memo(() => {
             {title}
           </Typography>
         </div>
-        <Stack direction="row" spacing={2}>
-          <Button variant="contained">Primary</Button>
-          <Button variant="contained">Link</Button>
-          <Button variant="contained" disabled>
-            Link
-          </Button>
-        </Stack>
         <div className="sub-section">
           <img src={imageReact} className="image image-animation" alt="React" />
           <img src={imageRedux} className="image image-animation" alt="Redux" />
