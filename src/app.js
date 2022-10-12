@@ -10,14 +10,16 @@ import { useStore } from 'Hook/store/useStore.js'
 const App = () => {
   const [mapStateToProps] = useStore()
   const { theme } = mapStateToProps
-  const { modeIsDark } = theme
+  const { paletteMode } = theme
 
   return (
-    <ThemeProvider theme={themeMui(modeIsDark)}>
-      <CssBaseline />
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+    <ThemeProvider theme={themeMui(paletteMode)}>
+      <React.Fragment>
+        <CssBaseline />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </React.Fragment>
     </ThemeProvider>
   )
 }

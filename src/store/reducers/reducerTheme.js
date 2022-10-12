@@ -9,7 +9,7 @@ const reducerTheme = (state = {}, action = {}) => {
   const { type, payload } = action
 
   if (type === ACTIONS_THEME.SET_ACTION_MODE_IS_DARK) {
-    newState = { ...state, modeIsDark: payload }
+    newState = { ...state, paletteMode: payload }
   }
 
   return newState

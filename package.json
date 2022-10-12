@@ -1,8 +1,8 @@
 {
   "name": "react_template",
   "version": "1.0.0",
-  "description": "\"template react\"",
-  "main": "index.js",
+  "description": "template react",
+  "main": "public/index.js",
   "scripts": {
     "lint": "eslint . --fix",
     "prettier": "prettier . --write",

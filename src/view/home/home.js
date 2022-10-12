@@ -12,21 +12,30 @@ import imageRedux from 'Images/redux.svg'
 import imageSass from 'Images/sass.svg'
 import imageWebpack from 'Images/webpack.svg'
 
+import { MODE_PALETTE } from 'Constants/themeMui.js'
+
 import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
 import Container from '@mui/material/Container'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import TextRotateUpIcon from '@mui/icons-material/TextRotateUp'
 import TextRotateVerticalIcon from '@mui/icons-material/TextRotateVertical'
+import Typography from '@mui/material/Typography'
+
+import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack'
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore()
   const [isUpperCase, setisUpperCase] = useState(false)
   const { title, theme } = mapStateToProps
-  const { modeIsDark } = theme
+  const { paletteMode } = theme
 
   const handleThemeMode = () => {
-    mapDispatchToProps(actionSetModeIsDark(!modeIsDark))
+    const mode =
+      paletteMode === MODE_PALETTE.DARK ? MODE_PALETTE.LIGHT : MODE_PALETTE.DARK
+
+    mapDispatchToProps(actionSetModeIsDark(mode))
   }
 
   const handleConvertText = () => {
@@ -39,8 +48,17 @@ const Home = React.memo(() => {
     <Container maxWidth="sm" fixed>
       <div className="container">
         <div className="sub-section">
-          <h1 className="title"> {title} </h1>
+          <Typography variant="h1" component="h1">
+            {title}
+          </Typography>
         </div>
+        <Stack direction="row" spacing={2}>
+          <Button variant="contained">Primary</Button>
+          <Button variant="contained">Link</Button>
+          <Button variant="contained" disabled>
+            Link
+          </Button>
+        </Stack>
         <div className="sub-section">
           <img src={imageReact} className="image image-animation" alt="React" />
           <img src={imageRedux} className="image image-animation" alt="Redux" />
@@ -66,7 +84,7 @@ const Home = React.memo(() => {
           />
 
           <ButtonIcon
-            statusButton={modeIsDark}
+            statusButton={paletteMode === MODE_PALETTE.DARK}
             onClick={handleThemeMode}
             iconOn={LightModeIcon}
             iconOff={DarkModeIcon}
