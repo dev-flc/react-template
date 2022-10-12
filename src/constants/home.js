@@ -1,1 +1,1 @@
-export const title = "Welcome"
+export const title = 'Welcome'

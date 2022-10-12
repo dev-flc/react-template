@@ -1,30 +1,28 @@
-import React, { useState } from "react"
-import { actionSetTitle } from "Actions/actionSetTitle.js"
-import { actionSetModeIsDark } from "Actions/actionsTheme.js"
-import { useStore } from "Hook/store/useStore.js"
-import { convertTextUpperOrLower } from "Utils/utils.js"
+import React, { useState } from 'react'
 
-import imageEslint from "Images/eslint.svg"
-import imagePrettier from "Images/prettier.svg"
-import imageReact from "Images/react.svg"
-import imageRedux from "Images/redux.svg"
-import imageSass from "Images/sass.svg"
-import imageWebpack from "Images/webpack.svg"
+import { actionSetModeIsDark } from 'Actions/actionsTheme.js'
+import { actionSetTitle } from 'Actions/actionSetTitle.js'
+import { convertTextUpperOrLower } from 'Utils/utils.js'
+import { useStore } from 'Hook/store/useStore.js'
 
-import ButtonIcon from "Components/buttonIcon/buttonIcon.js"
-import DarkModeIcon from "@mui/icons-material/DarkMode"
-import LightModeIcon from "@mui/icons-material/LightMode"
-import TextRotateUpIcon from "@mui/icons-material/TextRotateUp"
-import TextRotateVerticalIcon from "@mui/icons-material/TextRotateVertical"
+import imageEslint from 'Images/eslint.svg'
+import imagePrettier from 'Images/prettier.svg'
+import imageReact from 'Images/react.svg'
+import imageRedux from 'Images/redux.svg'
+import imageSass from 'Images/sass.svg'
+import imageWebpack from 'Images/webpack.svg'
 
-import Container from "@mui/material/Container"
+import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
+import Container from '@mui/material/Container'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import TextRotateUpIcon from '@mui/icons-material/TextRotateUp'
+import TextRotateVerticalIcon from '@mui/icons-material/TextRotateVertical'
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore()
   const [isUpperCase, setisUpperCase] = useState(false)
-
   const { title, theme } = mapStateToProps
-
   const { modeIsDark } = theme
 
   const handleThemeMode = () => {
@@ -79,6 +77,6 @@ const Home = React.memo(() => {
   )
 })
 
-Home.displayName = "Home"
+Home.displayName = 'Home'
 
 export { Home }

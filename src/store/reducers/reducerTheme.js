@@ -1,4 +1,4 @@
-import { ACTIONS_THEME } from "Constants/constantStore.js"
+import { ACTIONS_THEME } from 'Constants/constantStore.js'
 
 const reducerTheme = (state = {}, action = {}) => {
   if (!state) {

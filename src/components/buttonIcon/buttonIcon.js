@@ -1,6 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import IconButton from "@mui/material/IconButton"
+import React from 'react'
+
+import IconButton from '@mui/material/IconButton'
+import PropTypes from 'prop-types'
 
 const ButtonIcon = React.memo(
   ({ statusButton, iconOn: IconOn, iconOff: IconOff, ...props }) => (
@@ -11,19 +12,19 @@ const ButtonIcon = React.memo(
 )
 
 ButtonIcon.propTypes = {
-  "aria-label": PropTypes.string,
+  'aria-label': PropTypes.string,
   disabled: PropTypes.bool,
-  statusButton: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired,
-  iconOn: PropTypes.elementType.isRequired,
   iconOff: PropTypes.elementType.isRequired,
+  iconOn: PropTypes.elementType.isRequired,
+  onClick: PropTypes.func.isRequired,
+  statusButton: PropTypes.bool.isRequired
 }
 
 ButtonIcon.defaultProps = {
-  "aria-label": "button",
-  disabled: false,
+  'aria-label': 'button',
+  disabled: false
 }
 
-ButtonIcon.displayName = "ButtonIcon"
+ButtonIcon.displayName = 'ButtonIcon'
 
 export default ButtonIcon

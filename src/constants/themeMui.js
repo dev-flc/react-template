@@ -1,8 +1,8 @@
-import { createTheme } from "@mui/material/styles"
+import { createTheme } from '@mui/material/styles'
 
 export const themeMui = (isDark = false) =>
   createTheme({
     palette: {
-      mode: isDark ? "dark" : "light",
-    },
+      mode: isDark ? 'dark' : 'light'
+    }
   })

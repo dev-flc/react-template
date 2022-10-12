@@ -1,6 +1,6 @@
 export const state = {
   theme: {
-    modeIsDark: true,
+    modeIsDark: true
   },
-  title: "W E L C O M E",
+  title: 'W E L C O M E'
 }
