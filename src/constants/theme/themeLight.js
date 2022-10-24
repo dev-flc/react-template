@@ -25,7 +25,7 @@ export const themeLight = {
         },
 
         sizeLarge: {
-          fontFamily: '',
+          fontFamily: "'roboto'",
           fontSize: '1rem',
           fontWeight: 700,
           letterSpacing: 0,
@@ -62,7 +62,7 @@ export const themeLight = {
             border: '1px solid',
             borderColor: '#e0e0e0',
             color: '#424242',
-            fontFamily: '',
+            fontFamily: "'roboto'",
             fontSize: '0.8125rem',
             fontWeight: 400,
             letterSpacing: 0,
@@ -566,7 +566,7 @@ export const themeLight = {
     },
 
     body1: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '1rem',
       fontWeight: 400,
       letterSpacing: 0,
@@ -575,7 +575,7 @@ export const themeLight = {
     },
 
     body2: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '0.875rem',
       fontWeight: 400,
       letterSpacing: 0,
@@ -584,7 +584,7 @@ export const themeLight = {
     },
 
     button: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '0.875rem',
       fontWeight: 700,
       letterSpacing: 0,
@@ -595,7 +595,7 @@ export const themeLight = {
 
     caption: {
       display: 'inline-block',
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '0.75rem',
       fontWeight: 700,
       letterSpacing: 0,
@@ -603,10 +603,10 @@ export const themeLight = {
       scrollMarginTop: 'calc(var(--MuiDocs-header-height) + 32px)'
     },
 
-    fontFamily: '',
-    fontFamilyCode: 'Consolas,Menlo,Monaco,Andale Mono,Ubuntu Mono,monospace',
-    fontFamilySystem: '',
-    fontFamilyTagline: '',
+    fontFamily: "'roboto'",
+    fontFamilyCode: "'roboto'",
+    fontFamilySystem: "'roboto'",
+    fontFamilyTagline: "'roboto'",
     fontSize: 14,
     fontWeightBold: 700,
     fontWeightExtraBold: 800,
@@ -617,7 +617,7 @@ export const themeLight = {
 
     h1: {
       color: '#0A1929',
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: 'clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)',
       fontWeight: 800,
       lineHeight: 1.1142857142857143,
@@ -626,7 +626,7 @@ export const themeLight = {
 
     h2: {
       color: '#132F4C',
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: 'clamp(1.5rem, 0.9643rem + 1.4286vw, 2.25rem)',
       fontWeight: 800,
       lineHeight: 1.2222222222222223,
@@ -634,7 +634,7 @@ export const themeLight = {
     },
 
     h3: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '2.25rem',
       fontWeight: 400,
       letterSpacing: 0.2,
@@ -643,7 +643,7 @@ export const themeLight = {
     },
 
     h4: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '1.75rem',
       fontWeight: 400,
       letterSpacing: 0.2,
@@ -653,7 +653,7 @@ export const themeLight = {
 
     h5: {
       color: '#007FFF',
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '1.5rem',
       fontWeight: 400,
       letterSpacing: 0.1,
@@ -662,7 +662,7 @@ export const themeLight = {
     },
 
     h6: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '1.25rem',
       fontWeight: 500,
       lineHeight: 1.5,
@@ -672,7 +672,7 @@ export const themeLight = {
     htmlFontSize: 16,
 
     overline: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '0.75rem',
       fontWeight: 400,
       lineHeight: 2.66,
@@ -681,7 +681,7 @@ export const themeLight = {
     },
 
     subtitle1: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '1.125rem',
       fontWeight: 500,
       letterSpacing: 0,
@@ -690,7 +690,7 @@ export const themeLight = {
     },
 
     subtitle2: {
-      fontFamily: '',
+      fontFamily: "'roboto'",
       fontSize: '0.875rem',
       fontWeight: 500,
       lineHeight: 1.57,
