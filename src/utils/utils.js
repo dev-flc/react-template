@@ -1,8 +1,6 @@
-export const convertTextUpperOrLower = text => {
-  return [
-    text === text.toUpperCase()
-      ? text.toLowerCase() || text === text.toLowerCase()
-      : text.toUpperCase(),
-    text === text.toUpperCase()
-  ]
-}
+export const convertTextUpperOrLower = text => [
+  text === text.toUpperCase()
+    ? text.toLowerCase() || text === text.toLowerCase()
+    : text.toUpperCase(),
+  text === text.toUpperCase()
+]

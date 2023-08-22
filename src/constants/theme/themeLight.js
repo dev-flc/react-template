@@ -619,7 +619,7 @@ export const themeLight = {
       color: '#0A1929',
       fontFamily: "'roboto'",
       fontSize: 'clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem)',
-      fontWeight: 800,
+      fontWeight: 300,
       lineHeight: 1.1142857142857143,
       scrollMarginTop: 'calc(var(--MuiDocs-header-height) + 32px)'
     },
