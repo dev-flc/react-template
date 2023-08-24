@@ -9,3 +9,4 @@ LICENCE
 .editorconfig
 node_modules/
 public/
+coverage/

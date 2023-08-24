@@ -9,4 +9,4 @@ LICENCE
 .editorconfig
 node_modules/
 public/
-__test__
+coverage/

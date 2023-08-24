@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const WebpackBar = require('webpackbar')
 
 const TIME = new Date().getTime()
 const { VERSION_APP, NAME_APP } = process.env
@@ -7,7 +9,6 @@ const { VERSION_APP, NAME_APP } = process.env
 module.exports = {
   entry: {
     [NAME_APP]: {
-      filename: `js/[name].${VERSION_APP}.${TIME}.[contenthash].js`,
       import: [
         path.resolve(__dirname, './src/index.js'),
         path.resolve(__dirname, './src/assets/styles/index.scss')
@@ -17,6 +18,20 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        exclude: [path.resolve(__dirname, 'node_modules')],
+        include: [path.resolve(__dirname, 'src')],
+        test: /\.[jt]sx?$/,
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              plugins: ['@babel/plugin-proposal-class-properties'],
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+          }
+        ]
+      },
       {
         test: /\.(sass|css|scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
@@ -32,7 +47,7 @@ module.exports = {
         generator: {
           filename: `assets/fonts/[name].${VERSION_APP}.${TIME}.[hash][ext][query]`
         },
-        test: /\.(ttf|eot|otf)(\?[\s\S]+)?$/,
+        test: /\.(ttf|eot|otf|woff2|woff)(\?[\s\S]+)?$/,
         type: 'asset/resource'
       }
     ]
@@ -50,8 +65,12 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
+
+    new WebpackBar({ color: '#ff4081' }),
+
     new HtmlWebpackPlugin({
-      cache: true,
+      cache: false,
       favicon: path.resolve(__dirname, './src/assets/images/logo.svg'),
       filename: 'index.html',
       template: path.resolve(__dirname, './src/index.ejs'),

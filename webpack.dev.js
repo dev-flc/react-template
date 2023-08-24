@@ -8,7 +8,11 @@ module.exports = merge(common, {
     allowedHosts: 'all',
     historyApiFallback: true,
     host: '127.0.0.1',
-    open: true,
+    open: {
+      app: {
+        arguments: ['--open', '--incognito', '--new-window']
+      }
+    },
     port: 8080,
     static: { directory: path.resolve(__dirname, 'public') }
   },

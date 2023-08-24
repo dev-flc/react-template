@@ -16,7 +16,6 @@ import { MODE_PALETTE } from 'Constants/theme/themeMui.js'
 
 import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
 import Container from '@mui/material/Container'
-import Cross from 'Components/cross/cross.js'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import TextRotateUpIcon from '@mui/icons-material/TextRotateUp'
@@ -45,9 +44,6 @@ const Home = React.memo(() => {
   return (
     <Container maxWidth="sm" fixed>
       <div className="container">
-        <div className="sub-section">
-          <Cross />
-        </div>
         <div className="sub-section">
           <Typography variant="h1" component="h1">
             {title}

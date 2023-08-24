@@ -7,10 +7,16 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+
+  "eslint.validate": ["typescript", "typescriptreact"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -22,5 +28,9 @@
     "html",
     "vue",
     "markdown"
-  ]
+  ],
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n"
 }

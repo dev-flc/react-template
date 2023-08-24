@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 const ButtonIcon = React.memo(
   ({ statusButton, iconOn: IconOn, iconOff: IconOff, ...props }) => (
-    <IconButton {...props} variant="outlined">
+    <IconButton data-testid="button-icon" {...props} variant="outlined">
       {statusButton ? <IconOn /> : <IconOff />}
     </IconButton>
   )
