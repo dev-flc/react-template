@@ -4,5 +4,5 @@ export const state = {
   theme: {
     paletteMode: MODE_PALETTE.DARK
   },
-  title: '< D E V E L O P / >'
+  title: '{ dev : F.L.C }'
 }
