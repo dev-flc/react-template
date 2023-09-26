@@ -1,26 +1,23 @@
-import adapter from 'redux-localstorage/lib/adapters/localStorage'
-import filter from 'redux-localstorage-filter'
+import { configureStore } from '@reduxjs/toolkit'
+import { INITIAL_STATE } from 'Config/state.js'
+import { persistReducer } from 'redux-persist'
 import reducers from 'Config/reducers.js'
-import { state } from 'Config/state.js'
+import storageSession from 'redux-persist/lib/storage/session'
 import thunk from 'redux-thunk'
-import { applyMiddleware, compose, createStore } from 'redux'
-import { KEY_FILTER_PERSIST, KEYS_STORAGE } from 'Constants/constantStore.js'
-import persistState, { mergePersistedState } from 'redux-localstorage'
 
-const middleWareGeneral = store => next => action => next(action)
+const persistConfig = {
+  key: 'root',
+  storage: storageSession,
+  version: 1
+}
 
-const reducer = compose(mergePersistedState())(reducers)
+const persistedReducer = persistReducer(persistConfig, reducers)
 
-const storage = compose(filter(KEY_FILTER_PERSIST))(adapter(sessionStorage))
+const store = configureStore({
+  devTools: process.env.NODE_ENV !== 'production',
+  middleware: [thunk],
+  preloadedState: INITIAL_STATE,
+  reducer: persistedReducer
+})
 
-const enhancer = compose(
-  applyMiddleware(thunk, middleWareGeneral),
-  persistState(storage, KEYS_STORAGE),
-  window.__REDUX_DEVTOOLS_EXTENSION__
-    ? window.__REDUX_DEVTOOLS_EXTENSION__()
-    : f => f
-)
-
-const store = createStore(reducer, state, enhancer)
-
-export { store }
+export default store

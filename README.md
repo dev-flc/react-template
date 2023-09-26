@@ -80,7 +80,7 @@
 
 | Software | Versión                                                       | Documentación                                                                                                                                                       |
 | -------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Node.js  | <img src ="https://img.shields.io/badge/v14.x >= v16.x-blue"> | [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)                                  |
+| Node.js  | <img src ="https://img.shields.io/badge/v18.17.1 >= v20.5.1-blue"> | [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)                                  |
 | Git      | <img src ="https://img.shields.io/badge/latest-brightgreen">  | [![Git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)                                                |
 | VsCode   | <img src ="https://img.shields.io/badge/latest-brightgreen">  | [![VsCode](https://img.shields.io/badge/Visual_studio_code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/) |
 
@@ -108,14 +108,14 @@ para realizar la instalacion de manera correcta en su editor.
 
 ## **Librerias generales del proyecto:**
 
-| Libreria    | Versión                                                | Documentación                                                                                                                       |
-| ----------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| React       | <img src ="https://img.shields.io/badge/v18.2.0-blue"> | [![Git](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://es.reactjs.org/)        |
-| Redux       | <img src ="https://img.shields.io/badge/v4.2.0-blue">  | [![Redux](https://img.shields.io/badge/Redux-7B42BC?style=for-the-badge&logo=redux&logoColor=white)](https://es.redux.js.org/)      |
-| Webpack     | <img src ="https://img.shields.io/badge/v5.74.0-blue"> | [![Redux](https://img.shields.io/badge/Webpack-0081CB?style=for-the-badge&logo=webpack&logoColor=white)](https://webpack.js.org/)   |
-| Babel       | <img src ="https://img.shields.io/badge/v7.18.10-blue"> | [![Redux](https://img.shields.io/badge/Babel-FFAD19?style=for-the-badge&logo=Babel&logoColor=white)](https://babeljs.io/)           |
-| Material UI | <img src ="https://img.shields.io/badge/v5.10.1-blue">  | [![Redux](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)](https://mui.com/) |
-| Sass        | <img src ="https://img.shields.io/badge/v1.54.4-blue">  | [![Redux](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)          |
+| Libreria        | Versión                                                 | Documentación                                                                                                                            |
+| -----------     | ------------------------------------------------------  | -----------------------------------------------------------------------------------------------------------------------------------      |
+| React           | <img src ="https://img.shields.io/badge/v18.2.0-blue">  | [![Git](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://es.reactjs.org/)             |
+| reduxjs/toolkit | <img src ="https://img.shields.io/badge/v1.9.6-blue">   | [![Redux](https://img.shields.io/badge/reduxjs/toolkit-7B42BC?style=for-the-badge&logo=redux&logoColor=white)](https://es.redux.js.org/) |
+| Webpack         | <img src ="https://img.shields.io/badge/v5.74.0-blue">  | [![Redux](https://img.shields.io/badge/Webpack-0081CB?style=for-the-badge&logo=webpack&logoColor=white)](https://webpack.js.org/)        |
+| Babel           | <img src ="https://img.shields.io/badge/v7.18.10-blue"> | [![Redux](https://img.shields.io/badge/Babel-FFAD19?style=for-the-badge&logo=Babel&logoColor=white)](https://babeljs.io/)                |
+| Material UI     | <img src ="https://img.shields.io/badge/v5.10.1-blue">  | [![Redux](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=react&logoColor=white)](https://mui.com/)      |
+| Sass            | <img src ="https://img.shields.io/badge/v1.54.4-blue">  | [![Redux](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)               |
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 

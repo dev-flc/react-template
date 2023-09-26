@@ -20,7 +20,7 @@ const Router = () => {
         path="*"
         element={
           <ContainerGlobal>
-            <Home />
+            <h1>forever2</h1>
           </ContainerGlobal>
         }
       />
