@@ -10,3 +10,4 @@ LICENCE
 node_modules/
 public/
 coverage/
+jsconfig.json
