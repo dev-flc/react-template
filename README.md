@@ -10,7 +10,7 @@
   font-size: 50px;
   line-height: 75px;
   font-weight: 800;ls
-  "> R E A C T -  T E M P L A T E </h1>
+  ">R E A C T -  T E M P L A T E</h1>
 </center>
 <br />
 <div align="center">
