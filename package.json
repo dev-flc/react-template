@@ -30,8 +30,8 @@
   ],
   "engineStrict": true,
   "engines": {
-    "npm": "9.8.0",
-    "node": "v20.5.0"
+    "npm":"9.8.0",
+    "node":"v20.5.1"
   },
   "author": "Fernando L.C",
   "license": "MIT",
