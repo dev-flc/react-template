@@ -33,7 +33,7 @@
       "View/*": ["src/view/*"]
     }
   },
-  "excluir": [
+  "exclude": [
     "node_modules",
     "**/node_modules/*",
     "public",
