@@ -1,6 +1,5 @@
 <!DOCTYPE html5>
 <html lang="es">
-  <!-- Versión : <%= htmlWebpackPlugin.options.version %> -->
   <head>
     <meta charset="utf-8" />
     <meta
@@ -11,7 +10,7 @@
       <%= htmlWebpackPlugin.options.title %>
     </title>
   </head>
-  <body>
+  <body id="<%= htmlWebpackPlugin.options.version %>">
     <div id="app">
       <ui-view>
         <p>Cargando...</p>

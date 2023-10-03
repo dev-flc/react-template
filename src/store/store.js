@@ -6,9 +6,9 @@ import storageSession from 'redux-persist/lib/storage/session'
 import thunk from 'redux-thunk'
 
 const persistConfig = {
-  key: 'root',
+  key: process.env.NAME_PROJECT || 'root',
   storage: storageSession,
-  version: 1
+  version: process.env.VERSION_APP || '0.0.0'
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

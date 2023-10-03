@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WebpackBar = require('webpackbar')
+const Dotenv = require('dotenv-webpack')
 
 const TIME = new Date().getTime()
 const { VERSION_APP, NAME_APP } = process.env
@@ -99,6 +100,9 @@ module.exports = {
   output,
 
   plugins: [
+    new Dotenv({
+      systemvars: true
+    }),
     new CleanWebpackPlugin(),
     new WebpackBar({ color: '#ff4081' }),
     new HtmlWebpackPlugin({
