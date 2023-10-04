@@ -1,4 +1,4 @@
-import ButtonIcon from './../../src/components/buttonIcon/buttonIcon' // Ajusta la importación según tu estructura de directorios
+import ButtonIcon from './../../src/components/buttonIcon/buttonIcon'
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 
@@ -6,8 +6,8 @@ import { fireEvent, render } from '@testing-library/react'
 const MockIconOn = () => <span data-testid="mock-icon-on">On</span>
 const MockIconOff = () => <span data-testid="mock-icon-off">Off</span>
 
-describe('COMPONENT ButtonIcon', () => {
-  test('METODO ONCLICK (FALSE)', () => {
+describe('🤖 COMPONENT BUTTON-ICON', () => {
+  test('🚀 METHOD ONCLICK (FALSE)', () => {
     const handleClick = jest.fn()
 
     const { getByTestId } = render(
@@ -23,7 +23,7 @@ describe('COMPONENT ButtonIcon', () => {
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
 
-  test('METODO ONCLICK (TRUE)', () => {
+  test('🚀 METHOD ONCLICK (TRUE)', () => {
     const handleClick = jest.fn()
 
     const { getByTestId } = render(

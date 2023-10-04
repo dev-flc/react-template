@@ -4,7 +4,7 @@
     "paths": {
       /* Store */
       "Actions/*": ["src/store/actions/*"],
-      /* Componets */
+      /* Components */
       "Components/*": ["src/components/*"],
       /* Store */
       "Config/*": ["src/store/config/*"],

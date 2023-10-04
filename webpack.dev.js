@@ -14,7 +14,6 @@ module.exports = merge(common, {
   },
 
   devtool: 'source-map',
-
   mode: 'development',
 
   module: {
@@ -35,8 +34,6 @@ module.exports = merge(common, {
   },
 
   plugins: [new ReactRefreshWebpackPlugin()],
-
   target: 'web',
-
   watchOptions: { ignored: /node_modules/ }
 })

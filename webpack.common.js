@@ -100,11 +100,13 @@ module.exports = {
   output,
 
   plugins: [
-    new Dotenv({
-      systemvars: true
-    }),
+    new Dotenv({ systemvars: true }),
     new CleanWebpackPlugin(),
-    new WebpackBar({ color: '#ff4081' }),
+    new WebpackBar({
+      color: '#2ECC71',
+      name: `${NAME_APP} 🔥`,
+      profile: true
+    }),
     new HtmlWebpackPlugin({
       cache: false,
       favicon: path.resolve(__dirname, './src/assets/images/logo.svg'),
