@@ -1,7 +1,7 @@
 {
   "name": "react_template",
   "version": "1.0.0",
-  "description": "template react",
+  "description": "R E A C T - T E M P L A T E 🔥",
   "main": "public/index.js",
   "scripts": {
     "start": "node server.js",
@@ -10,7 +10,7 @@
     "test": "jest --verbose --coverage",
     "test:watch": "jest --verbose --coverage --watchAll",
     "clean:cache": "chmod +x ./clean-cache.sh && sh ./clean-cache.sh",
-    "dev": "NAME_APP=$npm_package_name VERSION=$npm_package_version webpack-dev-server --progress --config webpack.dev.js",
+    "dev": "NAME_APP=$npm_package_name VERSION_APP=$npm_package_version webpack-dev-server --progress --config webpack.dev.js",
     "dev:win": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack-dev-server --progress --config webpack.dev.js",
     "build": "NAME_APP=$npm_package_name VERSION_APP=$npm_package_version webpack --progress --config webpack.prod.js",
     "build:win": "SET VERSION_APP=%npm_package_version%& SET NAME_APP=%npm_package_name%& webpack --progress --config webpack.prod.js",
@@ -21,12 +21,12 @@
     "url": "git+https://github.com/ferch01992/React_template.git"
   },
   "keywords": [
-    "\"react",
+    "react",
     "redux",
     "webpack5",
     "sass",
     "babel7",
-    "mateialUI\""
+    "mateialUI"
   ],
   "engineStrict": true,
   "engines": {
