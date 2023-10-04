@@ -227,7 +227,7 @@ npm run dev
 
 _**URL de compilción:**_ [![localhost](https://img.shields.io/badge/127.0.0.1:8080-blue)](http://127.0.0.1:8080)
 
-![alt text](https://github.com/ferch01992/assets/blob/master/images/template-webpack-5/react_templated.jpg?raw=true)
+![alt text](https://github.com/ferch01992/assets/blob/master/images/template-webpack-5/home-template-webpack-5.jpg?raw=true)
 
 <p align="right"><a href="#top">volver arriba 🔼</a></p>
 
