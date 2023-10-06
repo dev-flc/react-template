@@ -12,9 +12,9 @@ import imageRedux from 'Images/redux.svg'
 import imageSass from 'Images/sass.svg'
 import imageWebpack from 'Images/webpack.svg'
 
+import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
 import { MODE_PALETTE } from 'Constants/theme/themeMui.js'
 
-import ButtonIcon from 'Components/buttonIcon/buttonIcon.js'
 import Container from '@mui/material/Container'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'

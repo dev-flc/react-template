@@ -21,12 +21,11 @@
   },
   "exclude": [
     "node_modules",
-    "**/node_modules/*",
     "public",
-    "**/public/*",
-    "webpack",
-    "**/webpack/*",
     ".husky",
-    "**/.husky/*"
-  ]
+    "coverage",
+    ".vscode",
+    "__test__"
+  ],
+  "include": ["src/**/*"]
 }
