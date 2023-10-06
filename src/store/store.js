@@ -8,7 +8,7 @@ import reducers from 'Reducers/reducerAll'
 
 const persistConfig = {
   blacklist: ['title'],
-  key: process.env.NAME_PROJECT || 'root',
+  key: process.env.NAME_APP || 'root',
   storage: storageSession,
   version: 1
 }
