@@ -6,11 +6,11 @@ const useStore = () => {
   const { getState, dispatch: mapDispatchToProps, subscribe } = store
   const [mapStateToProps, setStoreState] = useState(getState())
 
-  useEffect(() =>
+  useEffect(() => {
     subscribe(() => {
       setStoreState(getState())
-    }, [])
-  )
+    })
+  }, [])
 
   return [mapStateToProps, mapDispatchToProps]
 }

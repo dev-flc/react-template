@@ -24,7 +24,7 @@ import Typography from '@mui/material/Typography'
 
 const Home = React.memo(() => {
   const [mapStateToProps, mapDispatchToProps] = useStore()
-  const [isUpperCase, setisUpperCase] = useState(false)
+  const [isUpperCase, setIsUpperCase] = useState(false)
   const { title, theme } = mapStateToProps
   const { paletteMode } = theme
 
@@ -37,7 +37,7 @@ const Home = React.memo(() => {
 
   const handleConvertText = () => {
     const { 0: text, 1: status } = convertTextUpperOrLower(title)
-    setisUpperCase(status)
+    setIsUpperCase(status)
     mapDispatchToProps(actionSetTitle(text))
   }
 
