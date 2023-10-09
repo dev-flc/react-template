@@ -1,13 +1,17 @@
 {
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
@@ -16,18 +20,24 @@
     "editor.formatOnSave": true
   },
 
-  "eslint.validate": ["typescript", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+
   "eslint.probe": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "html",
-    "vue",
-    "markdown"
+    "html"
   ],
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,

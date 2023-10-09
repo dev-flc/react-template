@@ -1,14 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { INITIAL_STATE } from 'Config/state.js'
 import { persistReducer } from 'redux-persist'
-import reducers from 'Config/reducers.js'
 import storageSession from 'redux-persist/lib/storage/session'
 import thunk from 'redux-thunk'
 
+import { INITIAL_STATE } from 'Config/initialState'
+import reducers from 'Reducers/reducerAll'
+
 const persistConfig = {
-  key: process.env.NAME_PROJECT || 'root',
+  blacklist: ['title'],
+  key: process.env.NAME_APP || 'root',
   storage: storageSession,
-  version: process.env.VERSION_APP || '0.0.0'
+  version: 1
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

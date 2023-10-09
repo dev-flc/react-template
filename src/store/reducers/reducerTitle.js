@@ -1,4 +1,4 @@
-import { ACTIONS_TITLE } from 'Constants/constantStore.js'
+import { ACTIONS_TITLE } from 'Constants/store/store'
 
 const reducerTitle = (state = {}, action = {}) => {
   if (!state) {

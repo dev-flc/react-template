@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 
 import { App } from './app.js'
 import { createRoot } from 'react-dom/client'
@@ -8,16 +8,12 @@ import store from 'Store/store.js'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore } from 'redux-persist'
 
-import { INITIAL_STATE } from 'Config/state.js'
-
-const persistor = persistStore(store, [INITIAL_STATE])
-
 createRoot(document.getElementById('app')).render(
-  <React.StrictMode>
+  <StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={null} persistor={persistStore(store)}>
         <App />
       </PersistGate>
     </Provider>
-  </React.StrictMode>
+  </StrictMode>
 )
