@@ -1,10 +1,6 @@
 import { ACTIONS_THEME } from 'Constants/store/store'
 
 const reducerTheme = (state = {}, action = {}) => {
-  if (!state) {
-    return null
-  }
-
   let newState = state
   const { type, payload } = action
 

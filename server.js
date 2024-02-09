@@ -60,5 +60,5 @@ app.use(express.static('./public', CONFIG_FILES))
 app.use('*', express.static(path.resolve(__dirname, 'public')))
 
 app.listen(PORT, () => {
-  console.log(`Server successfull : http://127.0.0.1:${PORT}`)
+  console.log(`Server successful : http://127.0.0.1:${PORT}`)
 })

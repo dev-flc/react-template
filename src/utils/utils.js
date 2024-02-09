@@ -1,4 +1,4 @@
-// funtion convertTextUpperOrLower
+// function convertTextUpperOrLower
 export const convertTextUpperOrLower = text => [
   text === text.toUpperCase()
     ? text.toLowerCase() || text === text.toLowerCase()
