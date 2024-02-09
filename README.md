@@ -161,6 +161,7 @@ npm i ó npm install
 
 --------------------------------------------------------------------------------
 
+
 ## **Configuración de Eslint y Prettier en VSCode**
 
 >Archivo `.vscode/settings.json` de VSCode.
