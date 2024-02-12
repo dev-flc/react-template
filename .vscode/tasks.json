@@ -2,8 +2,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "npm",
-      "script": "dev:win",
+      "label": "Ejecutar script dev:win",
+      "type": "shell",
+      "command": "bash",
+      "args": ["./.vscode/script.sh"],
       "runOptions": {
         "runOn": "folderOpen"
       }
